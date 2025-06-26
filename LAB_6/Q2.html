@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Information</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  body {
+    font-family: sans-serif;
+  }
+  .user-info {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .text-center{
+    color: aqua;
+  }
+</style>
+</head>
+<body>
+<div class="container" >
+  <h1 class="text-center">User Information</h1>
+  <div class="user-info" >
+    <p><strong>Name: </strong><span id="userName"></span></p>
+    <p><strong>Age: </strong><span id="userAge"></span></p>
+    <p><strong>Email: </strong><span id="userEmail"></span></p>
+  </div>
+</div>
+<script>
+  const userData = {
+    name: "Nitin Vaykar",
+    age: 20,
+    email: "nitinvaykar3@.gmail.com"
+  };
+  document.getElementById("userName").textContent=userData.name;
+  document.getElementById("userAge").textContent=userData.age;
+  document.getElementById("userEmail").textContent=userData.email;
+</script>
+</body>
+</html>
