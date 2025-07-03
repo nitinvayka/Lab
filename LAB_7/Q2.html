@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Colour</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4;
+           
+        }
+        .container button{
+            padding: 1rem;
+            border-radius: 20px;
+            outline: none;
+            border: 1px solid rgb(40, 153, 214);
+            cursor: pointer;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Change Background Color</h1>
+        <button>Click Me</button>
+    </div>
+    <script>
+        let container = document.querySelector('.container')
+        let button = document.querySelector('button');
+        let bc = document.querySelector('h1')
+        let flag = true;
+        button.addEventListener('click',()=>{
+            if(flag){
+                container.style.backgroundColor = 'red';
+                bc.style.color='white'
+                flag = false;
+            }else{
+                container.style.backgroundColor = 'white';
+                bc.style.color='black'
+                flag = true;
+            }
+        })
+    </script>
+</body>
+</html>

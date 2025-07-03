@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .controls {
+      margin-bottom: 20px;
+    }
+    select, button {
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background-color: white;
+      padding: 5px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Photo Gallery</h1>
+  <div class="controls">
+    <select id="category">
+      <option value="random">Random</option>
+      <option value="nature">Nature</option>
+      <option value="technology">Technology</option>
+      <option value="people">People</option>
+      <option value="cars">Cars</option>
+      <option value="animals">Animals</option>
+    </select>
+    <button onclick="loadImages()">Load Images</button>
+  </div>
+  <div class="gallery" id="gallery"></div>
+  <script src="script.js"></script>
+</body>
+</html>
